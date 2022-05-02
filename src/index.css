@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Montserrat:ital,wght@0,100;0,400;0,800;1,500;1,600&family=Poppins:ital,wght@1,500&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
 }
 body{
   background-color:#242222;
@@ -42,9 +46,22 @@ li a:hover {
   font-weight:bold;
 }
 .logo{
-  margin-top:200px;
+  display: flex;
+  margin-top:150px;
   margin-bottom:20px;
+  margin-left: 440px;
 }
+
+.logo h2{
+  
+  color: #dcdcdc;
+  font-weight: 900;
+  font-size: 80px; 
+}
+.logo h2.second{
+  color:#cb4154;
+}
+
 .bar{
   
   width:575px;
@@ -88,6 +105,7 @@ li a:hover {
   font-size:15px;
   padding: 10px 20px;
   margin:5px;
+  margin-right: 20px;
   border-radius:4px;
   outline:none;
 }
@@ -98,10 +116,13 @@ li a:hover {
 }
 
 /* beta.js*/
-.beta{
- 
-  margin:0px 0px 0px 100px;
+
+.bet{
+  display: flex;
+  flex-direction: column;
+  margin:0px 0px 0px 90px;
 }
+
 .beta-nav{
   display:flex;
   justify-content: flex-start;
@@ -111,16 +132,58 @@ li a:hover {
   margin-top:50px
   
 }
-.beta .logo-beta img{
-  height: 60px;
-  aspect-ratio: auto 92 / 30;
-  width: 130px;
+.beta .logo-beta{
+  display: flex;
+  margin-top: 5px;
+}
+.beta .logo-beta h2{
   
+  color: #dcdcdc;
+  font-weight: 900;
+  font-size: 40px;
 
+}
+.beta .logo-beta h2.second-h{
+  color:#cb4154;
 }
 .beta .bar {
 margin-left: 45px;
 }
+.contain .content{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
+/* card.js*/
+section.card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  margin-right: 200px;
+  
+}
 
-
+ .card-p a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: small;
+  height: 10px;
+}
+.card-h{
+  margin-top: 5px;
+}
+.card-h a{
+  color:#6495ed ;
+  text-decoration: none;
+}
+.card-d{
+  color: #f5f5f5;
+  line-height: 25px;
+  margin-top: 5px;
+}
+.card-h a:hover{
+  text-decoration: underline;
+}

@@ -1,26 +1,43 @@
 import React from 'react'
-export default function Beta({ farma,response,search,isAnswerOk }) {
+import Card from './Card'
 
-  console.log(farma);
+
+export default function Beta({ farma,response,search,isAnswerOk,keyword,loading }) {
+
+  
     return (
       <>
+      
+      <div className="bet">
       <header className='beta'>
         <div className="beta-nav" >
             <div className="logo-beta">
-      <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
+
+              <h2>Search</h2>
+              <h2 className='second-h'>It</h2>
     </div>
     
     <div className="bar">
       <form action="" onSubmit={response}>
-      <input className="searchbar" type="search" title="Search" onChange={search}/>
-  <button type="submit">Search</button>
+      <input className="searchbar" type="search" title="text" value={keyword} onChange={search}/>
+  
       </form>
-    </div>   
-
-     
-        </div>
+    </div>   </div>
         </header>
-        
+
+        <section className='contain' >
+    <div className="content">
+    {isAnswerOk&&farma.map(result =>{
+        return (
+          
+            <Card result={result} key={result.position}/>
+          
+        )
+      })
+    }</div>
+     
+     </section>
+     </div>
         </>
     )
 }
